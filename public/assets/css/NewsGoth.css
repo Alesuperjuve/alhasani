@@ -1,0 +1,6 @@
+@font-face {
+    font-family: 'NewsGoth'; /* Ganti dengan nama yang diinginkan */
+    src: url('/fonts/NewsGoth BT Roman.ttf') format('ttf'), /* Pastikan ekstensi sesuai */
+    font-weight: normal;
+    font-style: normal;
+}
