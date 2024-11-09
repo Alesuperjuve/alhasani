@@ -1,4 +1,4 @@
 <x-app-layout>
     
-    {{ __("Testing Halaman Madrasah") }}
+    {{ __("COBAIN Madrasah") }}
 </x-app-layout>
