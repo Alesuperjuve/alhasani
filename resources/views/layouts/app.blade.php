@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>{{ config('app.name') }}</title>
 
-    @include('components.alh-script')
+    @include('layouts/alh-script')
   
 
   </head>
@@ -15,7 +15,7 @@
       @include('layouts/alh-nav-kanan')
       <!-- partial -->
       <div class="container-fluid page-body-wrapper">
-        @include('components/alh-sidebar')
+        @include('layouts/alh-sidebar')
         <!-- partial -->
         <div class="main-panel">
           <div class="content-wrapper">
@@ -26,7 +26,7 @@
                     @include('layouts/alh-overview')
                     <div>
                       <div class="btn-wrapper">
-                        @include('layouts/alh-tombol-kanan')
+                          @include('layouts.alh-tombol-kanan')
                       </div>
                     </div>
                   </div>
@@ -56,7 +56,8 @@
           <!-- partial:partials/_footer.html -->
           <footer class="footer">
             <div class="d-sm-flex justify-content-center justify-content-sm-between">
-              @include('layouts.alh-footer');
+              @include('layouts/alh-footer');
+
             </div>
           </footer>
           <!-- partial -->
@@ -71,5 +72,8 @@
 
 </html>
 
-<!-- Panggil Modal -->
+<!-- Panggil Modal atau Offcanvas-->
 @include('components/modal-xl')
+@include('components/modal-kamar')
+@include('components/offcanvas')
+

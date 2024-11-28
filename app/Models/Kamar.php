@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -14,6 +13,6 @@ class Kamar extends Model
 
     public function asrama()
     {
-        return $this->belongsTo(Asrama::class, 'id_asrama', 'id_asrama');
+        return $this->belongsTo(Asrama::class, 'id_asrama');
     }
 }

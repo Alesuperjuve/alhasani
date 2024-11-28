@@ -4,7 +4,8 @@
     :headers="['nama_santri'    => 'NAMA',
                'alamat'         => 'ALAMAT', 
                'kota'           => 'KOTA',
-               'pendidikan'    => 'PENDIDIKAN']" 
+               'nama_kamar'    => 'KAMAR',
+               'detail'    => 'DETAIL']" 
     :search="$search" />
 
     

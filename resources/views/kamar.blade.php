@@ -1,10 +1,11 @@
 <x-app-layout>
-    
-   
+    <x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            {{ __('Data Kamar Berdasarkan Asrama') }}
+        </h2>
+    </x-slot>
 
-    <x-dataTabel :rows="$kamarList" 
-    :headers="['nama_kamar'    => 'NAMA KAMAR',
-               'kapasitas'     => 'KAPASITAS', 
-               'nama_asrama'     => 'ASRAMA']" 
-    :search="$search" />
+    <div class="container mt-4">
+        <x-nav-pills :asramas="$asramas" />
+    </div>
 </x-app-layout>

@@ -2,25 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Kamar;
-use Illuminate\Http\Request;
+use App\Models\Asrama;
 
 class KamarController extends Controller
 {
-    public function index(Request $request)
+    public function index()
     {
-        // Mendapatkan query pencarian dari request
-        $search = $request->input('search', '');
-
-        // Mengambil data kamar beserta kolom nama_asrama menggunakan join
-        $kamarList = Kamar::select('kamar.*', 'asrama.nama_asrama')
-                    ->join('asrama', 'asrama.id_asrama', '=', 'kamar.id_asrama')
-                    ->when($search, function ($query, $search) {
-                        return $query->where('kamar.nama_kamar', 'like', '%' . $search . '%');
-                    })
-                    ->paginate(5); // Gunakan pagination
-
-        return view('kamar', compact('kamarList', 'search'));
+        $asramas = Asrama::with('kamar')
+        ->orderBy('nama_asrama', 'asc')
+        ->get(); // Mengambil Asrama beserta Kamar
+        
+        return view('kamar', compact('asramas'));
     }
 }
-

@@ -4,9 +4,18 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SantriController;
 use App\Http\Controllers\KamarController;
 use App\Http\Controllers\PesantrenController;
+use App\Http\Controllers\AsramaController;
+
 
 
 use Illuminate\Support\Facades\Route;
+
+Route::post('/asrama/store', [AsramaController::class, 'store'])->name('asrama.store');
+
+Route::put('/asrama/{id}', [AsramaController::class, 'update'])->name('asrama.update');
+
+
+
 
 Route::get('/', function () {
     return view('welcome');

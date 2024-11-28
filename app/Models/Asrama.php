@@ -9,6 +9,7 @@ class Asrama extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['nama_asrama'];
     protected $table = 'asrama';
     protected $primaryKey = 'id_asrama';
 
