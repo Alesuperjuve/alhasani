@@ -87,22 +87,40 @@ $(document).ready(function () {
         $('#counter1').text('0');
         $('#counter2').text('0');
         $('#counter3').text('0');
+
+        // Variabel target dari data Laravel
+        var totsan = countTOTALSANTRI-1;
+        var sanmas = countSANTRIMASUK-1;
+        var totkam = countTOTALKAMAR-1;
+        var totkap = countTOTALKAPASITAS-1;
+        var kapisi = countKAPASITASTERISI-1;
+        var kapsisa = countKAPASITASSISA-1;
+
         setInterval(function () {
             var curval = parseInt($('#counter').text());
             var curval1 = parseInt($('#counter1').text().replace(' ', ''));
             var curval2 = parseInt($('#counter2').text());
             var curval3 = parseInt($('#counter3').text());
-            if (curval <= 1007) {
+            var curvalKamar = parseInt($('#counterKamar').text());
+            var curvalKapsisa = parseInt($('#counterKapsisa').text());
+
+            if (curval <= totsan) {
                 $('#counter').text(curval + 1);
             }
-            if (curval1 <= 1280) {
-                $('#counter1').text(sdf_FTS((curval1 + 20), 0, ' '));
+            if (curval1 <= sanmas) {
+                $('#counter1').text(sdf_FTS((curval1 + 1), 0, ' '));
             }
-            if (curval2 <= 145) {
+            if (curvalKamar <= totkam) {
+                $('#counterKamar').text(curvalKamar + 1);
+            }
+            if (curval2 <= totkap) {
                 $('#counter2').text(curval2 + 1);
             }
-            if (curval3 <= 1022) {
+            if (curval3 <= kapisi) {
                 $('#counter3').text(curval3 + 1);
+            }
+            if (curvalKapsisa <= kapsisa) {
+                $('#counterKapsisa').text(curvalKapsisa + 1);
             }
         }, 2);
     }, 500);

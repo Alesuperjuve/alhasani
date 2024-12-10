@@ -5,12 +5,6 @@
     <div class="offcanvas-body">
         <h5 id="namaSantri">-</h5>
         <div id="santriDetail">
-            <h5><strong>Nama:</strong> </h5>
-            <p><strong>Alamat:</strong> </p>
-            <p><strong>Kota:</strong> </p>
-            <p><strong>Kamar:</strong> </p>
-            <p><strong>Asrama:</strong> </p>
-            <p><strong>Ayah:</strong> </p>
         </div>
     </div>
 </div>

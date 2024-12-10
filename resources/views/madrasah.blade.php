@@ -1,4 +1,5 @@
 <x-app-layout>
     
-    {{ __("COBAIN Madrasah") }}
+ madrasah
+
 </x-app-layout>

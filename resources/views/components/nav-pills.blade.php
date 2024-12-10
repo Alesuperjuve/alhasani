@@ -27,17 +27,46 @@
                         <th class="text-center">LANTAI</th>
                         <th class="text-center">KAPASITAS</th>
                         <th class="text-center">TERISI</th>
+                        <th class="text-center">DETAIL</th>
+                        
                     </tr>
                 </thead>
                 <tbody>
                     @foreach($asrama->kamar as $key => $kamar)
                     <tr>
                         <td class="text-center">{{ $key + 1 }}</td>
-                        <td>{{ strtoupper("KAMAR ".$kamar->nama_kamar) }}</td>
+                        <td>
+    <a 
+        href="#" 
+        class="text-decoration-none text-primary edit-kamar" 
+        data-bs-toggle="modal" 
+        data-bs-target="#modalKamar" 
+        data-id="{{ $kamar->id_kamar }}" 
+        data-nama="{{ $kamar->nama_kamar }}" 
+        data-lantai="{{ $kamar->lantai }}" 
+        data-kapasitas="{{ $kamar->kapasitas }}" 
+        data-id_asrama="{{ $kamar->id_asrama }}"
+    >
+        KAMAR {{ strtoupper($kamar->nama_kamar) }}
+    </a>
+</td>
+
+
                         <td class="text-center">{{ $kamar->lantai }}</td>
                         <td class="text-center">{{ $kamar->kapasitas }}</td>
-                        <td class="text-center"> 2 (DUMMY) <a href="#">LIHAT DETAIL</a> </td>
-                    </tr>
+                        <td class="text-center"> {{ $kamar->terisi }} </td>
+                        <td class="text-center"> 
+                            <a href="#"
+                                data-bs-toggle="modal"
+                                data-bs-target="#modalPenghuni"
+                                
+                                data-nama-kamar="{{ $kamar->nama_kamar }}"
+                                data-detail-santri="{{ json_encode($kamar->detail_santri) }}"
+    >
+        <div class="badge badge-opacity-primary me-3">Lihat Penghuni</div>
+    </a>
+                        </td>
+                        
                     @endforeach
                 </tbody>
             </table>
@@ -111,4 +140,55 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 </script>
 
+<!-- JavaScript yang akan menangkap klik pada tombol/link dan memuat nama-nama santri ke dalam modal. -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+    const penghuniLinks = document.querySelectorAll('a[data-bs-target="#modalPenghuni"]');
+
+    penghuniLinks.forEach(link => {
+        link.addEventListener('click', function () {
+            // Ambil data dari atribut data
+            const namaKamar = this.getAttribute('data-nama-kamar');
+            const detailSantriJSON = this.getAttribute('data-detail-santri');
+
+            // Decode JSON menjadi array
+            const detailSantri = detailSantriJSON ? JSON.parse(detailSantriJSON) : [];
+
+            // Cari elemen modal title dan tbody
+            const modalTitle = document.querySelector('#modalPenghuni .modal-title');
+            const modalTableBody = document.querySelector('#modalTableBody');
+
+            // Masukkan nama kamar ke dalam modal title
+            modalTitle.textContent = 'Kamar ' + namaKamar;
+
+            // Bersihkan isi tabel sebelumnya
+            modalTableBody.innerHTML = '';
+
+            if (detailSantri.length > 0) {
+                // Masukkan data ke tabel
+                detailSantri.forEach((santri, index) => {
+                    const row = `
+                        <tr>
+                            <td class="text-center">${index + 1}</td>
+                            <td>${santri.nik}</td>
+                            <td>${santri.nama_santri}</td>
+                            <td>${santri.kota}</td>
+                        </tr>
+                    `;
+                    modalTableBody.innerHTML += row;
+                });
+            } else {
+                // Jika tidak ada penghuni, tambahkan baris kosong
+                modalTableBody.innerHTML = `
+                    <tr>
+                        <td colspan="5" class="text-center">Tidak ada penghuni</td>
+                    </tr>
+                `;
+            }
+        });
+    });
+});
+
+
+</script>
 

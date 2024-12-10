@@ -33,6 +33,16 @@
         <link rel="stylesheet" href="assets/css/owl.transitions.css">
         <link rel="stylesheet" href="assets/css/style.css">
         <link rel="stylesheet" href="assets/css/responsive.css">
+
+        <script>
+            var countTOTALSANTRI        = {{ $statistik['totalSantri']}};
+            var countSANTRIMASUK        = {{ $statistik['santriMasukTahunIni']}};
+            var countTOTALKAMAR         = {{ $statistik['totalKamar']}};
+            var countTOTALKAPASITAS     = {{ $statistik['totalKapasitas']}};
+            var countKAPASITASTERISI    = {{ $statistik['kapasitasTerisi']}};
+            var countKAPASITASSISA      = {{ $statistik['kapasitasSisa']}};
+        </script>
+
     </head>
     <body>
 
@@ -151,54 +161,80 @@
                 <div class="row">
                     <div class="col-md-12 col-xs-12 percent-blocks m-main" data-waypoint-scroll="true">
                         <div class="row">
-                            <div class="col-sm-3 col-xs-6">
+                            <div class="col-sm-2 col-xs-6">
                                 <div class="count-item">
                                     <div class="count-item-circle">
-                                        <span class="pe-7s-users"></span>
+                                        <span class="pe-7s-study"></span>
                                     </div>
-                                    <div class="chart" data-percent="5000">
+                                    <div class="chart" data-percent="0">
                                         <h2 class="percent" id="counter">0</h2>
-                                        <h5>SANTRI </h5>
+                                        <h5>JUMLAH SANTRI </h5>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-3 col-xs-6">
+                            <div class="col-sm-2 col-xs-6">
+                                <div class="count-item">
+                                    <div class="count-item-circle">
+                                        <span class="pe-7s-add-user"></span>
+                                    </div>
+                                    <div class="chart" data-percent="0">
+                                        <h2 class="percent" id="counter1">0</h2>
+                                        <h5>SANTRI BARU </h5>
+                                        <p>{{ now()->year }}</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-2 col-xs-6">
                                 <div class="count-item">
                                     <div class="count-item-circle">
                                         <span class="pe-7s-home"></span>
                                     </div>
-                                    <div class="chart" data-percent="12000">
-                                        <h2 class="percent" id="counter1">0</h2>
+                                    <div class="chart" data-percent="0">
+                                        <h2 class="percent" id="counterKamar">0</h2>
                                         <h5>KAMAR</h5>
                                     </div>
                                 </div> 
                             </div> 
-                            <div class="col-sm-3 col-xs-6">
+                            <div class="col-sm-2 col-xs-6">
                                 <div class="count-item">
                                     <div class="count-item-circle">
-                                        <span class="pe-7s-flag"></span>
+                                        <span class="pe-7s-graph"></span>
                                     </div>
-                                    <div class="chart" data-percent="76">
+                                    <div class="chart" data-percent="1">
                                         <h2 class="percent" id="counter2">0</h2>
-                                        <h5>ASAL DAERAH </h5>
+                                        <h5>KUOTA KAMAR </h5>
                                     </div>
                                 </div> 
                             </div> 
-                            <div class="col-sm-3 col-xs-6">
+                            <div class="col-sm-2 col-xs-6">
                                 <div class="count-item">
                                     <div class="count-item-circle">
-                                        <span class="pe-7s-graph2"></span>
+                                        <span class="pe-7s-note2"></span>
                                     </div>
-                                    <div class="chart" data-percent="5000">
+                                    <div class="chart" data-percent="1">
                                         <h2 class="percent"  id="counter3">0</h2>
-                                        <h5>PROGRES TAHFIDZ</h5>
+                                        <h5>KUOTA TERISI</h5>
                                     </div>
                                 </div> 
 
                             </div>
+                            <div class="col-sm-2 col-xs-6">
+                                <div class="count-item">
+                                    <div class="count-item-circle">
+                                        <span class="pe-7s-exapnd2"></span>
+                                    </div>
+                                    <div class="chart" data-percent="0">
+                                        <h2 class="percent" id="counterKapsisa">0</h2>
+                                        <h5>SISA KUOTA </h5>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+
+
             </div>
         </div>
 

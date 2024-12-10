@@ -3,7 +3,6 @@
               <div class="card">
                 <div class="card-body">
                   <h4 class="card-title">Profil Pesantren</h4>
-                 
                   <div class="row">
                     <div class="col-md-6">
                       <address>
@@ -53,6 +52,15 @@
                       </address>
                     </div>
                   </div>
+                  <div class="row">
+                      <div class="col-lg-8"></div>
+                      <div class="col-lg-4 text-xs">
+                        <a href="#" class="btn btn-primary text-white me-0"
+                          data-bs-toggle="modal" 
+                          data-bs-target="#modalEditPondok">
+                       Edit </a>
+                      </div>
+                    </div>
                 </div>
                
               </div>

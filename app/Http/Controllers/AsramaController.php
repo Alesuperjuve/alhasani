@@ -25,16 +25,16 @@ class AsramaController extends Controller
     }
 
     public function update(Request $request, $id)
-{
-    $asrama = Asrama::find($id);
+    {
+        $asrama = Asrama::find($id);
 
-    if ($asrama) {
-        $asrama->nama_asrama = $request->nama_asrama;
-        $asrama->save();
+        if ($asrama) {
+            $asrama->nama_asrama = $request->nama_asrama;
+            $asrama->save();
 
         return redirect()->route('kamar')->with('success', 'Asrama berhasil diperbarui!');
     }
 
-    return redirect()->route('asrama.index')->with('error', 'Asrama tidak ditemukan!');
-}
+    return redirect()->route('kamar')->with('error', 'Asrama tidak ditemukan!');
+    }
 }

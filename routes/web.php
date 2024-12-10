@@ -5,17 +5,13 @@ use App\Http\Controllers\SantriController;
 use App\Http\Controllers\KamarController;
 use App\Http\Controllers\PesantrenController;
 use App\Http\Controllers\AsramaController;
+use App\Http\Controllers\cetakPDFController;
+use App\Http\Controllers\laporanController;
+use App\Http\Controllers\KartuController;
 
 
 
 use Illuminate\Support\Facades\Route;
-
-Route::post('/asrama/store', [AsramaController::class, 'store'])->name('asrama.store');
-
-Route::put('/asrama/{id}', [AsramaController::class, 'update'])->name('asrama.update');
-
-
-
 
 Route::get('/', function () {
     return view('welcome');
@@ -32,18 +28,47 @@ Route::middleware('auth')->group(function () {
 
     // Routes untuk halaman terkait santri
     Route::get('/santri', [SantriController::class, 'index'])->name('santri.index');
-    Route::get('/santri/{id}', [SantriController::class, 'show'])->name('santri.show');
+    Route::post('/santri/store', [SantriController::class, 'store'])->name('santri.store');
+    Route::post('/santri/updateKamar', [SantriController::class, 'updateKamar'])->name('santri.updateKamar');
     
+    Route::get('/santri/{id}', [SantriController::class, 'show'])->name('santri.show');
+    Route::post('/upload', [SantriController::class, 'updateFoto'])->name('santri.update');
+
+
+
+    
+    //Asrama
+    Route::post('/asrama/store', [AsramaController::class, 'store'])->name('asrama.store');
+    Route::put('/asrama/{id}', [AsramaController::class, 'update'])->name('asrama.update');
 
     //Route Kamar
     Route::get('/kamar', [KamarController::class, 'index'])->name('kamar');
+    Route::post('/kamar/store', [KamarController::class, 'store'])->name('kamar.store');
+    Route::put('/kamar/{id}', [KamarController::class, 'update'])->name('kamar.update');
+
+
 
     // Routes untuk halaman lainnya
     Route::get('/pesantren', [PesantrenController::class, 'index'])->name('pesantren');
+
+    //Routes untuk endpoint ;
+    Route::get('/get-rooms/{id_asrama}', [KamarController::class, 'getRooms'])->name('get.rooms');
+    Route::get('/getInfoKamar/{id_kamar}', [KamarController::class, 'getInfoKamar']);
+
+
     
     Route::view('/madrasah', 'madrasah')->name('madrasah');
     Route::view('/keuangan', 'keuangan')->name('keuangan');
-    Route::view('/laporan', 'laporan')->name('laporan');
+    
+    //laporan
+    Route::get('/laporan', [LaporanController::class, 'index'])->name('laporan');
+
+    //laporan
+    Route::get('/kartu', [KartuController::class, 'index'])->name('kartu');
+
+    //Cetak PDF
+    Route::get('/cetakPDF', [cetakPDFController::class, 'index'])->name('cetakPDF');
+
 });
 
 require __DIR__.'/auth.php';
