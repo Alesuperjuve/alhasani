@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="assets/staradmin/dist/assets/vendors/css/vendor.bundle.base.css">
     <link rel="stylesheet" href="assets/staradmin/dist/assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.css">
     <!-- endinject -->
+
+    <!-- Scripts -->
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
     
     <!-- Plugin css for this page -->
     <link rel="stylesheet" href="assets/staradmin/dist/assets/vendors/datatables.net-bs4/dataTables.bootstrap4.css">
