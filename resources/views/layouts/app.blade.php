@@ -16,25 +16,8 @@
       <!-- partial -->
       <div class="container-fluid page-body-wrapper">
         
-        <nav class="sidebar sidebar-offcanvas" id="sidebar">
-          <ul class="nav">
-            @foreach($sidebarMenu as $menu)
-            <li>
-                <li class="nav-item nav-category">{{ $menu['title'] }}</li>
-            
-                @foreach($menu['tombol'] as $tombol)
-                    <li class="nav-item">
-                      <a class="nav-link" href="{{ route($tombol['link']) }}">
-                        <i class="{{ $tombol['icon'] }}"></i>
-                          <span class="menu-title">{{ $tombol['nama'] }}</span>
-                        </i>
-                      </a>
-                    </li>
-                @endforeach
-                </li>
-            @endforeach
-          </ul>
-        </nav>
+        <x-sidebar-menu level="1" />
+
         
         <!-- partial -->
         <div class="main-panel">

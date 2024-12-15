@@ -63,7 +63,7 @@ Route::middleware('auth')->group(function () {
     //laporan
     Route::get('/laporan', [LaporanController::class, 'index'])->name('laporan');
 
-    //laporan
+    //kartu
     Route::get('/kartu', [KartuController::class, 'index'])->name('kartu');
 
     //Cetak PDF

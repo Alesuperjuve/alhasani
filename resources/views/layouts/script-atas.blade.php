@@ -11,6 +11,10 @@
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+    <!-- sweet alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     
     <!-- Plugin css for this page -->
     <link rel="stylesheet" href="assets/staradmin/dist/assets/vendors/datatables.net-bs4/dataTables.bootstrap4.css">

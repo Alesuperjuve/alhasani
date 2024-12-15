@@ -147,17 +147,17 @@ class AppServiceProvider extends ServiceProvider
     }
 
      private function panggilSidebar(): void
-{
-    // Ambil data dari method getAll() di class sidebar
-    $sidebarData = sidebar::getAll();
+        {
+            // Ambil data dari method getAll() di class sidebar
+            $sidebarData = sidebar::getAll();
 
-    // Pastikan data yang diterima berupa array
-    if (is_array($sidebarData)) {
-        // Share data sidebar ke semua view
-        View::share('sidebarMenu', $sidebarData);
-    } else {
-        // Jika data tidak valid, bisa memberikan error atau penanganan lain
-        abort(500, 'Data sidebar tidak valid!');
-    }
-}
+            // Pastikan data yang diterima berupa array
+            if (is_array($sidebarData)) {
+                // Share data sidebar ke semua view
+                View::share('sidebarMenu', $sidebarData);
+            } else {
+                // Jika data tidak valid, bisa memberikan error atau penanganan lain
+                abort(500, 'Data sidebar tidak valid!');
+            }
+        }
 }

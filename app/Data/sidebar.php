@@ -14,7 +14,8 @@ class sidebar
                     [
                         'nama'  => 'Dashboard',
                         'icon'  => 'mdi mdi-apps menu-icon',
-                        'link'  => 'dashboard'
+                        'link'  => 'dashboard',
+                        'level'  => '1'
                     ],
                 ],
             ],
@@ -25,7 +26,8 @@ class sidebar
                     [
                         'nama'  => 'Profil',
                         'icon'  => 'mdi mdi-floor-plan menu-icon',
-                        'link'  => 'pesantren'
+                        'link'  => 'pesantren',
+                        'level'  => '1'
                     ],
                 ],
             ],
@@ -36,22 +38,26 @@ class sidebar
                     [
                         'nama'  => 'Santri',
                         'icon'  => 'mdi mdi-account-circle-outline menu-icon',
-                        'link'  => 'santri.index'
+                        'link'  => 'santri.index',
+                        'level'  => '1'
                     ],
                     [
                         'nama'  => 'Kamar',
                         'icon'  => 'mdi mdi-table menu-icon',
-                        'link'  => 'kamar'
+                        'link'  => 'kamar',
+                        'level'  => '1'
                     ],
                     [
                         'nama'  => 'Keuangan',
                         'icon'  => 'mdi mdi-chart-line menu-icon',
-                        'link'  => 'keuangan'
+                        'link'  => 'keuangan',
+                        'level'  => '1'
                     ],
                     [
                         'nama'  => 'Madrasah',
                         'icon'  => 'mdi mdi-layers-outline menu-icon',
-                        'link'  => 'madrasah'
+                        'link'  => 'madrasah',
+                        'level'  => '2'
                     ],
                 ],
             ],
@@ -62,17 +68,20 @@ class sidebar
                     [
                         'nama'  => 'Kartu',
                         'icon'  => 'mdi mdi-card-text-outline menu-icon',
-                        'link'  => 'kartu'
+                        'link'  => 'kartu',
+                        'level'  => '1'
                     ],
                     [
                         'nama'  => 'Laporan',
                         'icon'  => 'mdi mdi-account-box-outline menu-icon',
-                        'link'  => 'laporan'
+                        'link'  => 'laporan',
+                        'level'  => '1'
                     ],
                     [
                         'nama'  => 'Cetak PDF',
                         'icon'  => 'mdi mdi-file-document menu-icon',
-                        'link'  => 'cetakPDF'
+                        'link'  => 'cetakPDF',
+                        'level'  => '1'
                     ],
                 ],
             ],
