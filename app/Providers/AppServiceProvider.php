@@ -3,14 +3,16 @@
 namespace App\Providers;
 
 use Illuminate\Support\Facades\View;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\ServiceProvider;
+
 use App\Helpers\FruitHelper;
 use App\Models\Asrama;
 use App\Models\Santri;
 use App\Models\Kamar;
+use App\Data\sidebar;
+use App\Data\menuStatistik; 
 use Carbon\Carbon;
-use Illuminate\Support\Facades\DB;
-use App\Data\sidebar; 
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -28,6 +30,9 @@ class AppServiceProvider extends ServiceProvider
         $this->shareStatistics();
         $this->shareViewRooms();
         $this->panggilSidebar();
+        $this->panggilmenuStatistik();
+        $this->composePesantrenList();
+        
     }
 
     /**
@@ -146,7 +151,7 @@ class AppServiceProvider extends ServiceProvider
         view()->share('viewRooms', $viewRooms);
     }
 
-     private function panggilSidebar(): void
+    private function panggilSidebar(): void
         {
             // Ambil data dari method getAll() di class sidebar
             $sidebarData = sidebar::getAll();
@@ -160,4 +165,23 @@ class AppServiceProvider extends ServiceProvider
                 abort(500, 'Data sidebar tidak valid!');
             }
         }
+
+    private function composePesantrenList()
+    {
+        View::composer('layouts.app', function ($view) {
+            $dataPesantren = \App\Models\Pesantren::where('id', 1)->first();
+            $view->with('dataPesantren', $dataPesantren);
+        });
+    }
+
+    protected function panggilmenuStatistik(): void
+    {
+        View::composer('*', function ($view) {
+            // Kirim data menuStatistik ke semua view
+            $view->with('menuStatistik', menuStatistik::getAll());
+        });
+    }
+
+
+
 }

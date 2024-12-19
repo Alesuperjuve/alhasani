@@ -2,14 +2,31 @@
     <!-- Nav Tabs -->
     <ul class="nav nav-pills nav-pills-custom mb-3" id="pills-tab" role="tablist">
         @foreach($asramas as $index => $asrama)
-        <li class="nav-item" role="presentation">
-            <button class="nav-link {{ $index === 0 ? 'active' : '' }}" id="pills-{{ $asrama->id_asrama }}-tab" data-bs-toggle="pill" data-bs-target="#pills-{{ $asrama->id_asrama }}" type="button" role="tab" aria-controls="pills-{{ $asrama->id_asrama }}" aria-selected="{{ $index === 0 ? 'true' : 'false' }}">
-                {{ "Asrama ".$asrama->nama_asrama }}
-            </button>
-        </li>
+            <li class="nav-item" role="presentation">
+                <button 
+                    class="nav-link {{ $index === 0 ? 'active' : '' }}" 
+                    id="pills-{{ $asrama->id_asrama }}-tab" 
+                    data-bs-toggle="pill" 
+                    data-bs-target="#pills-{{ $asrama->id_asrama }}" 
+                    type="button" 
+                    role="tab" 
+                    aria-controls="pills-{{ $asrama->id_asrama }}" 
+                    aria-selected="{{ $index === 0 ? 'true' : 'false' }}">
+                    {{ "Asrama " . $asrama->nama_asrama }}
+                </button>
+            </li>
         @endforeach
+
         <li class="nav-item" role="presentation">
-            <button class="nav-link " id="set-tab" data-bs-toggle="pill" data-bs-target="#set-asrama" type="button" role="tab" aria-controls="pills-set-asrama" aria-selected="false">
+            <button 
+                class="nav-link" 
+                id="set-tab" 
+                data-bs-toggle="pill" 
+                data-bs-target="#set-asrama" 
+                type="button" 
+                role="tab" 
+                aria-controls="set-asrama" 
+                aria-selected="false">
                 Set Asrama
             </button>
         </li>
@@ -18,76 +35,77 @@
     <!-- Tab Content -->
     <div class="tab-content" id="pills-tabContent">
         @foreach($asramas as $index => $asrama)
-        <div class="tab-pane fade {{ $index === 0 ? 'show active' : '' }}" id="pills-{{ $asrama->id_asrama }}" role="tabpanel" aria-labelledby="pills-{{ $asrama->id_asrama }}-tab">
-            <table class="table table-bordered table-responsive table-striped table-hover">
-                <thead>
-                    <tr>
-                        <th class="text-center">NO</th>
-                        <th class="text-center">NAMA KAMAR</th>
-                        <th class="text-center">LANTAI</th>
-                        <th class="text-center">KAPASITAS</th>
-                        <th class="text-center">TERISI</th>
-                        <th class="text-center">DETAIL</th>
-                        
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach($asrama->kamar as $key => $kamar)
-                    <tr>
-                        <td class="text-center">{{ $key + 1 }}</td>
-                        <td>
-    <a 
-        href="#" 
-        class="text-decoration-none text-primary edit-kamar" 
-        data-bs-toggle="modal" 
-        data-bs-target="#modalKamar" 
-        data-id="{{ $kamar->id_kamar }}" 
-        data-nama="{{ $kamar->nama_kamar }}" 
-        data-lantai="{{ $kamar->lantai }}" 
-        data-kapasitas="{{ $kamar->kapasitas }}" 
-        data-id_asrama="{{ $kamar->id_asrama }}"
-    >
-        KAMAR {{ strtoupper($kamar->nama_kamar) }}
-    </a>
-</td>
-
-
-                        <td class="text-center">{{ $kamar->lantai }}</td>
-                        <td class="text-center">{{ $kamar->kapasitas }}</td>
-                        <td class="text-center"> {{ $kamar->terisi }} </td>
-                        <td class="text-center"> 
-                            <a href="#"
-                                data-bs-toggle="modal"
-                                data-bs-target="#modalPenghuni"
-                                
-                                data-nama-kamar="{{ $kamar->nama_kamar }}"
-                                data-detail-santri="{{ json_encode($kamar->detail_santri) }}"
-    >
-        <div class="badge badge-opacity-primary me-3">Lihat Penghuni</div>
-    </a>
-                        </td>
-                        
-                    @endforeach
-                </tbody>
-            </table>
-        </div>
+            <div 
+                class="tab-pane fade {{ $index === 0 ? 'show active' : '' }}" 
+                id="pills-{{ $asrama->id_asrama }}" 
+                role="tabpanel" 
+                aria-labelledby="pills-{{ $asrama->id_asrama }}-tab">
+                <table class="table table-bordered table-responsive table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th class="text-center">NO</th>
+                            <th class="text-center">NAMA KAMAR</th>
+                            <th class="text-center">LANTAI</th>
+                            <th class="text-center">KAPASITAS</th>
+                            <th class="text-center">TERISI</th>
+                            <th class="text-center">DETAIL</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach($asrama->kamar as $key => $kamar)
+                            <tr>
+                                <td class="text-center">{{ $key + 1 }}</td>
+                                <td>
+                                    <a 
+                                        href="#" 
+                                        class="text-decoration-none text-primary edit-kamar" 
+                                        data-bs-toggle="modal" 
+                                        data-bs-target="#modalKamar" 
+                                        data-id="{{ $kamar->id_kamar }}" 
+                                        data-nama="{{ $kamar->nama_kamar }}" 
+                                        data-lantai="{{ $kamar->lantai }}" 
+                                        data-kapasitas="{{ $kamar->kapasitas }}" 
+                                        data-id_asrama="{{ $kamar->id_asrama }}"
+                                        data-url="{{ route('kamar.update', $kamar->id_kamar) }}">
+                                        KAMAR {{ strtoupper($kamar->nama_kamar) }}
+                                    </a>
+                                </td>
+                                <td class="text-center">{{ $kamar->lantai }}</td>
+                                <td class="text-center">{{ $kamar->kapasitas }}</td>
+                                <td class="text-center">{{ $kamar->terisi }}</td>
+                                <td class="text-center">
+                                    <a 
+                                        href="#" 
+                                        data-bs-toggle="modal" 
+                                        data-bs-target="#modalPenghuni" 
+                                        data-nama-kamar="{{ $kamar->nama_kamar }}" 
+                                        data-detail-santri="{{ json_encode($kamar->detail_santri) }}">
+                                        <div class="badge badge-opacity-primary me-3">Lihat Penghuni</div>
+                                    </a>
+                                </td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
         @endforeach
-        <div class="tab-pane fade" id="set-asrama" role="tabpanel" aria-labelledby="set-asrama">
+
+        <div class="tab-pane fade" id="set-asrama" role="tabpanel" aria-labelledby="set-tab">
             <div class="row">
-                <div class="col-10"></div>
-                <div class="col-2 align-item-right">
-                    <button class="btn btn-primary text-white me-0" data-bs-toggle="modal" data-bs-target="#tambahAsramaModal">
-                            <i class="mdi mdi-apple-keyboard-shift"></i>
-                            Tambah Asrama
+                <div class="col-8"></div>
+                <div class="col-4 p-2">
+                    <button 
+                        class="btn btn-primary btn-sm text-white pull-right me-2" 
+                        data-bs-toggle="modal" 
+                        data-bs-target="#tambahAsramaModal">
+                        <i class="mdi mdi-apple-keyboard-shift"></i> Tambah Asrama
                     </button>
                 </div>
             </div>
-            
             <x-tabel-asrama :asramas="$asramas" />
         </div>
     </div>
 </div>
-
 
 <!-- Modal untuk tambah asrama -->
 @include('layouts.modal-asrama')
@@ -97,6 +115,7 @@
         {{ session('success') }}
     </div>
 @endif
+
 
 <!-- JavaScript Edit Asrama -->
 

@@ -1,1 +1,0 @@
-<span class="float-none float-sm-end d-block mt-1 mt-sm-0 text-center">Copyright © 2024. PP Al-Hasani Kalibawang</span>

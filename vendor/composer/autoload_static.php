@@ -39,6 +39,7 @@ class ComposerStaticInit589cc0f65c3aaa7d4e9024d545bc1974
         'a1cfe24d14977df6878b9bf804af2d1c' => __DIR__ . '/..' . '/nunomaduro/collision/src/Adapters/Phpunit/Autoload.php',
         'ec07570ca5a812141189b1fa81503674' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert/Functions.php',
         '23f48187324d7c65066cd85a761637e8' => __DIR__ . '/../..' . '/app/Helpers/General.php',
+        '86e09ba793cefed4e14415a251b9ef38' => __DIR__ . '/../..' . '/app/Helpers/FruitHelper.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -546,6 +547,8 @@ class ComposerStaticInit589cc0f65c3aaa7d4e9024d545bc1974
 
     public static $classMap = array (
         'App\\Data\\daftarCetakPDF' => __DIR__ . '/../..' . '/app/Data/daftarCetakPDF.php',
+        'App\\Data\\menuStatistik' => __DIR__ . '/../..' . '/app/Data/menuStatistik.php',
+        'App\\Data\\sidebar' => __DIR__ . '/../..' . '/app/Data/sidebar.php',
         'App\\Enums\\GenderEnum' => __DIR__ . '/../..' . '/app/Enums/GenderEnum.php',
         'App\\Helpers\\FruitHelper' => __DIR__ . '/../..' . '/app/Helpers/FruitHelper.php',
         'App\\Http\\Controllers\\AsramaController' => __DIR__ . '/../..' . '/app/Http/Controllers/AsramaController.php',
@@ -577,8 +580,13 @@ class ComposerStaticInit589cc0f65c3aaa7d4e9024d545bc1974
         'App\\Models\\ViewKamarSantri' => __DIR__ . '/../..' . '/app/Models/ViewKamarSantri.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\View\\Components\\AppLayout' => __DIR__ . '/../..' . '/app/View/Components/AppLayout.php',
+        'App\\View\\Components\\Footer' => __DIR__ . '/../..' . '/app/View/Components/Footer.php',
         'App\\View\\Components\\GuestLayout' => __DIR__ . '/../..' . '/app/View/Components/GuestLayout.php',
         'App\\View\\Components\\NavPills' => __DIR__ . '/../..' . '/app/View/Components/NavPills.php',
+        'App\\View\\Components\\PanggilModal' => __DIR__ . '/../..' . '/app/View/Components/PanggilModal.php',
+        'App\\View\\Components\\SelamatDatang' => __DIR__ . '/../..' . '/app/View/Components/SelamatDatang.php',
+        'App\\View\\Components\\SidebarMenu' => __DIR__ . '/../..' . '/app/View/Components/SidebarMenu.php',
+        'App\\View\\Components\\Statistik' => __DIR__ . '/../..' . '/app/View/Components/Statistik.php',
         'App\\View\\Components\\TabelAsrama' => __DIR__ . '/../..' . '/app/View/Components/TabelAsrama.php',
         'App\\View\\Components\\dataTabel' => __DIR__ . '/../..' . '/app/View/Components/dataTabel.php',
         'App\\View\\Components\\listPDF' => __DIR__ . '/../..' . '/app/View/Components/listPDF.php',

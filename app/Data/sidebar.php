@@ -9,7 +9,7 @@ class sidebar
         return [
             [
                 'no'    => 1,
-                'title' => 'www.sidebardinamis.com',
+                'title' => 'www.alihifni.com',
                 'tombol' => [
                     [
                         'nama'  => 'Dashboard',
@@ -54,10 +54,10 @@ class sidebar
                         'level'  => '1'
                     ],
                     [
-                        'nama'  => 'Madrasah',
+                        'nama'  => 'Arus Kas',
                         'icon'  => 'mdi mdi-layers-outline menu-icon',
                         'link'  => 'madrasah',
-                        'level'  => '2'
+                        'level'  => '1'
                     ],
                 ],
             ],

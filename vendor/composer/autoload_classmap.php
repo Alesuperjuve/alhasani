@@ -7,6 +7,8 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'App\\Data\\daftarCetakPDF' => $baseDir . '/app/Data/daftarCetakPDF.php',
+    'App\\Data\\menuStatistik' => $baseDir . '/app/Data/menuStatistik.php',
+    'App\\Data\\sidebar' => $baseDir . '/app/Data/sidebar.php',
     'App\\Enums\\GenderEnum' => $baseDir . '/app/Enums/GenderEnum.php',
     'App\\Helpers\\FruitHelper' => $baseDir . '/app/Helpers/FruitHelper.php',
     'App\\Http\\Controllers\\AsramaController' => $baseDir . '/app/Http/Controllers/AsramaController.php',
@@ -38,8 +40,13 @@ return array(
     'App\\Models\\ViewKamarSantri' => $baseDir . '/app/Models/ViewKamarSantri.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
     'App\\View\\Components\\AppLayout' => $baseDir . '/app/View/Components/AppLayout.php',
+    'App\\View\\Components\\Footer' => $baseDir . '/app/View/Components/Footer.php',
     'App\\View\\Components\\GuestLayout' => $baseDir . '/app/View/Components/GuestLayout.php',
     'App\\View\\Components\\NavPills' => $baseDir . '/app/View/Components/NavPills.php',
+    'App\\View\\Components\\PanggilModal' => $baseDir . '/app/View/Components/PanggilModal.php',
+    'App\\View\\Components\\SelamatDatang' => $baseDir . '/app/View/Components/SelamatDatang.php',
+    'App\\View\\Components\\SidebarMenu' => $baseDir . '/app/View/Components/SidebarMenu.php',
+    'App\\View\\Components\\Statistik' => $baseDir . '/app/View/Components/Statistik.php',
     'App\\View\\Components\\TabelAsrama' => $baseDir . '/app/View/Components/TabelAsrama.php',
     'App\\View\\Components\\dataTabel' => $baseDir . '/app/View/Components/dataTabel.php',
     'App\\View\\Components\\listPDF' => $baseDir . '/app/View/Components/listPDF.php',

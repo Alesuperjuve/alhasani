@@ -38,4 +38,5 @@ return array(
     'a1cfe24d14977df6878b9bf804af2d1c' => $vendorDir . '/nunomaduro/collision/src/Adapters/Phpunit/Autoload.php',
     'ec07570ca5a812141189b1fa81503674' => $vendorDir . '/phpunit/phpunit/src/Framework/Assert/Functions.php',
     '23f48187324d7c65066cd85a761637e8' => $baseDir . '/app/Helpers/General.php',
+    '86e09ba793cefed4e14415a251b9ef38' => $baseDir . '/app/Helpers/FruitHelper.php',
 );

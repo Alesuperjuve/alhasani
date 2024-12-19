@@ -16,17 +16,10 @@ class UserSeeder extends Seeder
     {
         User::create([
             'name' => 'Zinedine Zidane',
-            'username' => 'Juventini',
-            'password' => Hash::make('Turin1998'),
-            'role' => 'Superadmin',
+            'email' => 'zidane@gmail.com',
+            'password' => Hash::make('12345678'),
         ]);
 
-        User::create([
-            'name' => 'Kasparov Nezmetdinov',
-            'username' => 'Nezmetdinov',
-            'password' => Hash::make('Gambitraja2000'),
-            'role' => 'User Biasa',
-        ]);
     }
 }
 

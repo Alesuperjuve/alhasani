@@ -1,0 +1,23 @@
+<?php
+return [
+    'Guru',
+    'Dosen',
+    'Wiraswasta',
+    'Dokter',
+    'Perawat',
+    'Polisi',
+    'Tentara',
+    'Pengacara',
+    'Arsitek',
+    'Insinyur',
+    'Programmer',
+    'Desainer Grafis',
+    'Aktor',
+    'Penulis',
+    'Jurnalis',
+    'Petani',
+    'Nelayan',
+    'Pilot',
+    'Pramugari',
+    'Koki',
+];

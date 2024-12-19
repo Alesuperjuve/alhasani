@@ -1,3 +1,5 @@
+<!-- resources/views/components/selamat-datang.blade.php -->
+
 <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex align-items-top flex-row">
   <!-- Navbar Brand Wrapper -->
   <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-start">
@@ -21,7 +23,9 @@
     <!-- Welcome Text -->
     <ul class="navbar-nav">
       <li class="nav-item fw-semibold d-none d-lg-block ms-0">
-        <h1 class="welcome-text">Selamat datang, <span class="text-black fw-bold">{{ Auth::user()->name }}</span></h1>
+        <h1 class="welcome-text">
+          Selamat Datang, <span class="text-black fw-bold">{{ Auth::user()->name }}</span>
+        </h1>
         <h3 class="welcome-sub-text">{{ $randomFruit }}</h3>
       </li>
     </ul>
@@ -30,7 +34,8 @@
     <ul class="navbar-nav ms-auto">
       <!-- Language Dropdown -->
       <li class="nav-item dropdown d-none d-lg-block">
-        <a class="nav-link dropdown-bordered dropdown-toggle dropdown-toggle-split" id="messageDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+        <a class="nav-link dropdown-bordered dropdown-toggle dropdown-toggle-split" id="messageDropdown" 
+           href="#" data-bs-toggle="dropdown" aria-expanded="false">
           Pilih Bahasa
         </a>
         <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list pb-0" aria-labelledby="messageDropdown">
@@ -80,7 +85,7 @@
           </a>
           <form method="POST" action="{{ route('logout') }}">
             @csrf
-            <a href="route('logout')" onclick="event.preventDefault(); this.closest('form').submit();" class="dropdown-item">
+            <a href="{{ route('logout') }}" onclick="event.preventDefault(); this.closest('form').submit();" class="dropdown-item">
               <i class="dropdown-item-icon mdi mdi-power text-danger me-2"></i> Keluar
             </a>
           </form>

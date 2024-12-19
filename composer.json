@@ -24,10 +24,12 @@
         "psr-4": {
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
-            "Database\\Seeders\\": "database/seeders/"
+            "Database\\Seeders\\": "database/seeders/",
+            "App\\": "app/"
         },
     "files": [
-        "app/Helpers/General.php"
+        "app/Helpers/General.php",
+        "app/Helpers/FruitHelper.php"
         ]
     },
     "autoload-dev": {
