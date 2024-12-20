@@ -54,10 +54,10 @@ class sidebar
                         'level'  => '1'
                     ],
                     [
-                        'nama'  => 'Arus Kas',
+                        'nama'  => 'Skincare',
                         'icon'  => 'mdi mdi-layers-outline menu-icon',
                         'link'  => 'madrasah',
-                        'level'  => '1'
+                        'level'  => '2'
                     ],
                 ],
             ],

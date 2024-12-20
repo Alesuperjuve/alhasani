@@ -76,7 +76,7 @@
                                         <select class="form-control " id="status" name="status">
                                             <option value="R">Reguler</option>
                                             <option value="SR">Semi Reguler</option>
-                                            <option value="H">Huffadz</option>
+                                            <option value="H">Saman</option>
                                         </select>
                                     </div>
                                 </div>
@@ -85,9 +85,9 @@
                                     <div class="mb-3 form-group">
                                         <label for="pendidikan" class="form-label "><strong>Unit Pendidikan</strong></label>
                                         <select class="form-control " id="pendidikan" name="pendidikan">
-                                            <option value="TAKHASSUS">Takhassus</option>
-                                            <option value="MTS">MTs</option>
-                                            <option value="MA">MA</option>
+                                            <option value="1">MTs</option>
+                                            <option value="2">MA</option>
+                                            <option value="3">Takhassus</option>
                                         </select>
                                     </div>
                                 </div>

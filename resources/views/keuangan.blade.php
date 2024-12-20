@@ -33,7 +33,32 @@
             </div>
             <div class="tab-pane fade" id="pembayaran" role="tabpanel" aria-labelledby="pembayaran-tab">
                 <h4>PEMBAYARAN</h4>
-                <p>Konten untuk tab PEMBAYARAN.</p>
+                <div class="row ms-2 me-2">
+                                        <div class="card-body mb-4">
+                                         <div class="row">
+                                              <div class="row col-4 pt-3">
+                                                <img src="assets/foto/santri/picture-005.jpg" class="img-fluid">
+                                              </div>
+                                              <div class="row col-8">
+                                                <div class="card-body px-0 pt-0 pb-2 ps-3">
+                                                  <div class="form-group">
+                                                      <label for="exampleFormControlSelect2">Pilih Santri yang hendak membayar</label>
+                                                      
+                                                      <select multiple="" class="form-control" id="exampleFormControlSelect2">
+                                                        <option>Alessandro Del Piero</option>
+                                                        <option>David Trezeguet</option>
+                                                        <option>Pavel Nedved</option>
+                                                        <option>Gianluigi Buffon</option>
+                                                        <option>Zinedine Zidane</option>
+                                                      </select>
+                                                  </div>
+                                                  
+                                                </div>
+                                              </div>
+                                            </div>
+                                          
+                                        </div>
+                                      </div>
             </div>
             <div class="tab-pane fade" id="item-bayar" role="tabpanel" aria-labelledby="item-bayar-tab">
                 <h4>ITEM BAYAR</h4>
