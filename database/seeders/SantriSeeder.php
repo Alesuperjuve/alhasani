@@ -29,7 +29,7 @@ class SantriSeeder extends Seeder
 
         $faker = Faker::create('id_ID');
 
-        for ($i = 0; $i < 300; $i++) {
+        for ($i = 0; $i < 500; $i++) {
             DB::table('santri')->insert([
                 'nama_santri' => $namaSantri[array_rand($namaSantri)],
                 'id_kamar' => rand(1, 10),
@@ -44,7 +44,7 @@ class SantriSeeder extends Seeder
                 'ijazah' => $ijazah[array_rand($ijazah)],
                 'alamat' => $faker->address,
                 'kota' => $namaKota[array_rand($namaKota)],
-                'status' => $faker->randomElement(['R', 'SR', 'H']),
+                'status' => $faker->randomElement(['R', 'SR','S']),
                 'pendidikan' => $faker->randomElement(['1', '2', '3', '99']),
                 'kelas' => $faker->randomElement(['7', '8', '9', '10', '11', '12', '00']),
                 'tanggal_masuk_pondok' => $faker->date(),
@@ -67,7 +67,7 @@ class SantriSeeder extends Seeder
                 'kerja_ibu' => $kerja[array_rand($kerja)],
                 'hp_ibu' => $faker->phoneNumber,
                 'nama_wali' => $namaWalisan[array_rand($namaWalisan)],
-                'status_wali' => $faker->randomElement(['Kakek', 'Nenek', 'Paman', 'Bibi']),
+                'status_wali' => $faker->randomElement(['1', '2', '3', '4','5','6','7']),
                 'hp_wali' => $faker->phoneNumber,
                 'created_at' => now(),
                 'updated_at' => now(),

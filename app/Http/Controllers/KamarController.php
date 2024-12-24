@@ -56,7 +56,7 @@ class KamarController extends Controller
         ]);
 
         // Redirect kembali ke halaman Kamar dengan pesan sukses
-        return redirect()->route('kamar')->with('success', 'Kamar berhasil ditambahkan!');
+        return redirect()->route('kamar')->with('sweetalert', 'Kamar berhasil ditambahkan!');
     }
 
     public function update(Request $request, $id)
@@ -71,7 +71,7 @@ class KamarController extends Controller
             $kamar = Kamar::findOrFail($id);
             $kamar->update($validated);
 
-            return redirect()->route('kamar')->with('success', 'Kamar berhasil diperbarui!');
+            return redirect()->route('kamar')->with('sweetalert', 'Kamar berhasil diperbarui!');
     }
 
     //Mengambil data kamar untuk keperluan santri pindah kamar

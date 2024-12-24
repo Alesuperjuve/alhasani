@@ -76,7 +76,7 @@
                                         <select class="form-control " id="status" name="status">
                                             <option value="R">Reguler</option>
                                             <option value="SR">Semi Reguler</option>
-                                            <option value="H">Saman</option>
+                                            <option value="S">Saman</option>
                                         </select>
                                     </div>
                                 </div>
@@ -176,8 +176,8 @@
                                     <div class="mb-3 form-group">
                                         <label for="hidup_ayah" class="form-label "><strong>Status Ayah</strong></label>
                                         <select class="form-control " id="hidup_ayah" name="hidup_ayah">
-                                            <option value="Hidup">Masih Hidup</option>
-                                            <option value="Meninggal">Sudah Meninggal</option>
+                                            <option value="1">Masih Hidup</option>
+                                            <option value="0">Sudah Meninggal</option>
                                         </select>
                                     </div>
                                 </div>
@@ -193,8 +193,8 @@
                                     <div class="mb-3 form-group">
                                         <label for="hidup_ibu" class="form-label "><strong>Status Ibu</strong></label>
                                         <select class="form-control " id="hidup_ibu" name="hidup_ibu">
-                                            <option value="Hidup">Masih Hidup</option>
-                                            <option value="Meninggal">Sudah Meninggal</option>
+                                            <option value="1">Masih Hidup</option>
+                                            <option value="0">Sudah Meninggal</option>
                                         </select>
                                     </div>
                                 </div>
@@ -249,10 +249,10 @@
                                     <div class="mb-3 form-group">
                                         <label for="status_wali" class="form-label "><strong>Status Wali</strong></label>
                                         <select class="form-control " id="status_wali" name="status_wali">
-                                            <option value="Kakak">Kakak</option>
-                                            <option value="Paman">Paman</option>
-                                            <option value="Bibi">Bibi</option>
-                                            <option value="Lainnya">Lainnya</option>
+                                            <option value="1">Kakak</option>
+                                            <option value="2">Paman</option>
+                                            <option value="3">Bibi</option>
+                                            <option value="4">Lainnya</option>
                                         </select>
                                     </div>
                                 </div>

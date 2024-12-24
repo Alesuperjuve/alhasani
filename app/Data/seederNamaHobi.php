@@ -19,6 +19,7 @@ return [
             'Merajut',
             'Game',
             'Pemrograman',
-            'Olahraga Lari',
-            'Basket', 
+            'Lari',
+            'Basket',
+            'Sepak Bola' 
         ];

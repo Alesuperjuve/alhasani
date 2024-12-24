@@ -52,42 +52,48 @@ class SantriController extends Controller
 
     public function store(Request $request)
     {
-        // Validasi input data santri
+        // Validasi input data santria
         $validated = $request->validate([
             'nama_santri'           => 'required|string|max:50',
             'nik'                   => 'required|string|max:16',
+            'nisn'                  => 'nullable|string|max:20',
             'jenis_kelamin'         => 'required|in:L,P',
             'tempat_lahir'          => 'required|string|max:50',
             'tanggal_lahir'         => 'required|date',
             'alamat'                => 'required|string|max:255',
             'kota'                  => 'required|string|max:50',
-            'status'                => 'required|in:R,SR,H',
-            'pendidikan'            => 'required|in:MTS,MA,TAKHASSUS',
+            'status'                => 'required|in:R,SR,S',
+            'pendidikan'            => 'required|in:1,2,3,99',
             'kelas'                 => 'required|in:7,8,9,10,11,12,00',
-            'nisn'                  => 'nullable|string|max:20',
             'sekolah_asal'          => 'nullable|string|max:30',
             'alamat_sekolah_asal'   => 'nullable|string|max:255',
             'tanggal_masuk_pondok'  => 'required|date',
+            'tanggal_keluar_pondok' => 'nullable|date',
+            'tanggal_masuk_mts'     => 'nullable|date',
+            'tanggal_keluar_mts'    => 'nullable|date',
+            'tanggal_masuk_ma'      => 'nullable|date',
+            'tanggal_keluar_ma'     => 'nullable|date',
             'hp_santri'             => 'nullable|string|max:15',
             'hobi'                  => 'nullable|string|max:30',
             'email'                 => 'required|email|max:30',
             'nama_ayah'             => 'required|string|max:50',
             'hp_ayah'               => 'required|string|max:20',
-            'hidup_ayah'            => 'required|in:Hidup,Meninggal',
+            'hidup_ayah'            => 'required|in:1,0',
             'kerja_ayah'            => 'required|string|max:50',
             'nama_ibu'              => 'required|string|max:50',
             'hp_ibu'                => 'required|string|max:20',
-            'hidup_ibu'             => 'required|in:Hidup,Meninggal',
+            'hidup_ibu'             => 'required|in:1,0',
             'kerja_ibu'             => 'required|string|max:50',
-            'nama_wali'              => 'required|string|max:50',
-            'hp_wali'                => 'required|string|max:20',
-            'status_wali'            => 'required|in:Kakak,Paman,Bibi,Lainnya',
+            'nama_wali'             => 'required|string|max:50',
+            'hp_wali'               => 'required|string|max:20',
+            'status_wali'           => 'required|in:1,2,3,4',
     ]);
 
     // Menyimpan data santri ke database
     santri::create([
             'nama_santri'           => $validated['nama_santri'],
             'nik'                   => $validated['nik'],
+            'nisn'                  => $validated['nisn'],
             'jenis_kelamin'         => $validated['jenis_kelamin'],
             'tempat_lahir'          => $validated['tempat_lahir'],
             'tanggal_lahir'         => $validated['tanggal_lahir'],
@@ -96,7 +102,6 @@ class SantriController extends Controller
             'status'                => $validated['status'],
             'pendidikan'            => $validated['pendidikan'],
             'kelas'                 => $validated['kelas'],
-            'nisn'                  => $validated['nisn'],
             'sekolah_asal'          => $validated['sekolah_asal'],
             'alamat_sekolah_asal'   => $validated['alamat_sekolah_asal'],
             'tanggal_masuk_pondok'  => $validated['tanggal_masuk_pondok'],
@@ -117,7 +122,7 @@ class SantriController extends Controller
         ]);
 
     // Redirect kembali ke halaman dengan pesan sukses
-    return redirect()->route('santri.index')->with('success', 'Data santri berhasil ditambahkan!');
+    return redirect()->route('santri.index')->with('sweetalert', 'Data santri berhasil ditambahkan!');
     }
 
 
@@ -188,7 +193,7 @@ class SantriController extends Controller
         $santri->save();
 
         // Return response atau redirect sesuai kebutuhan
-        return redirect()->route('santri.index')->with('success', 'Data santri berhasil di-update');
+        return redirect()->route('santri.index')->with('sweetalert', 'Data kamar untuk santri berhasil diperbarui');
     } else {
         // Jika santri tidak ditemukan
         return redirect()->route('santri.index')->with('error', 'Santri tidak ditemukan');

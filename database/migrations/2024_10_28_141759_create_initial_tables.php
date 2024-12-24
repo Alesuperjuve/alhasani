@@ -41,7 +41,7 @@ return new class extends Migration
             $table->string('ijazah')->nullable();
             $table->string('alamat')->nullable();
             $table->string('kota', 20)->nullable();
-            $table->enum('status', ['R', 'SR', 'H']);
+            $table->enum('status', ['R', 'SR', 'S']);
             $table->enum('pendidikan', ['1', '2', '3', '99']);
             $table->enum('kelas', ['7', '8', '9', '10', '11', '12', '00'])->nullable();
             $table->date('tanggal_masuk_pondok')->nullable();
@@ -64,7 +64,7 @@ return new class extends Migration
             $table->string('kerja_ibu')->nullable();
             $table->string('hp_ibu')->nullable();
             $table->string('nama_wali')->nullable();
-            $table->string('status_wali')->nullable();
+            $table->enum('status_wali', ['0','1', '2', '3', '4','5','6','7'])->default('0');
             $table->string('hp_wali')->nullable();
             $table->timestamps();
 

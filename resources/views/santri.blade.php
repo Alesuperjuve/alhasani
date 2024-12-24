@@ -3,7 +3,7 @@
     <div class="alert alert-success">
         {{ session('success') }}
     </div>
-@endif
+    @endif
     
     <x-dataTabel :rows="$santri" 
     :headers="['nama_santri'    => 'NAMA',

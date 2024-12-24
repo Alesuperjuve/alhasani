@@ -1,0 +1,34 @@
+DAFTAR ENUM
+
+1. Jenis Kelamin
+	L	= Laki-laki
+	P	= Perempuan
+2. Status Santri
+	R	= Reguler
+	SR	= Semi Reguler
+	S	= Saman
+3. Pendidikan
+	1	= MTS
+	2	= MA
+	3	= Huffadz
+	99	= Lainnya
+4. Kelas 
+	7	= Kelas 7
+	8	= Kelas 8
+	9	= Kelas 9
+	10	= Kelas 10
+	11	= Kelas 11
+	12	= Kelas 12
+	00	= Lainnya
+5. Hidup Ayah, Hidup Ibu
+	1	= Hidup
+	0	= Meninggal
+6. Status Wali
+	0	= Tidak ada
+	1	= Paman
+	2	= Bibi
+	3	= Kakak
+	4	= Kakek
+	5	= Nenek
+	6	= Sepupu
+	7	= Lainnya

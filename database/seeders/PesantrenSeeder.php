@@ -12,15 +12,15 @@ class PesantrenSeeder extends Seeder
      public function run()
     {
         DB::table('pesantren')->insert([
-            'nama_pesantren' => 'Pesantren Al-Hasani',
-            'alamat_pesantren' => 'Jl. Pesantren No 87',
-            'kota' => 'Jakarta',
+            'nama_pesantren' => 'Al-Hasani',
+            'alamat_pesantren' => 'Jl. Sunan Kalijaga No 87 Kalibawang',
+            'kota' => 'Yogyakarta',
             'hp_pesantren_1' => '081234567890',
             'hp_pesantren_2' => '081298765432',
             'email' => 'info@pesantrenhasani.com',
             'instagram' => 'al_hasani',
             'web' => 'https://www.pesantrenhasani.com',
-            'pengasuh' => 'Kyai Haji Muhammad Hasan',
+            'pengasuh' => 'KH Muhammad Hasan',
             'lurah' => 'Ahmad Zulfikar',
             'logo' => 'logo.png',
             'created_at' => now(),

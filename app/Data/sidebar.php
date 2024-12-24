@@ -9,7 +9,7 @@ class sidebar
         return [
             [
                 'no'    => 1,
-                'title' => 'www.alihifni.com',
+                'title' => 'www.alhasani.com',
                 'tombol' => [
                     [
                         'nama'  => 'Dashboard',
@@ -57,7 +57,7 @@ class sidebar
                         'nama'  => 'Skincare',
                         'icon'  => 'mdi mdi-layers-outline menu-icon',
                         'link'  => 'madrasah',
-                        'level'  => '2'
+                        'level'  => '1'
                     ],
                 ],
             ],
@@ -75,7 +75,13 @@ class sidebar
                         'nama'  => 'Laporan',
                         'icon'  => 'mdi mdi-account-box-outline menu-icon',
                         'link'  => 'laporan',
-                        'level'  => '1'
+                        'level'  => '2'
+                    ],
+                    [
+                        'nama'  => 'Report',
+                        'icon'  => 'mdi mdi-account-box-outline menu-icon',
+                        'link'  => 'dashboard',
+                        'level'  => '2'
                     ],
                     [
                         'nama'  => 'Cetak PDF',

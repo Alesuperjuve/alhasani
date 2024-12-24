@@ -18,8 +18,8 @@ class KamarSeeder extends Seeder
         // Shuffle array agar tidak ada redudansi
         shuffle($namaKamarList);
 
-        // Pastikan hanya 10 data yang digunakan
-        $namaKamarList = array_slice($namaKamarList, 0, 10);
+        // Pastikan hanya 30 data yang digunakan
+        $namaKamarList = array_slice($namaKamarList, 0, 30);
 
         $lantaiOptions = ['1', '2', '3'];
 
@@ -28,7 +28,7 @@ class KamarSeeder extends Seeder
             DB::table('kamar')->insert([
                 'id_asrama'   => rand(1, 4), // Angka random antara 1 dan 4
                 'nama_kamar'  => $namaKamar,
-                'kapasitas'   => rand(1, 10), // Angka random 1-10
+                'kapasitas'   => rand(20, 50), // Angka random 20-50
                 'lantai'      => $lantaiOptions[array_rand($lantaiOptions)], // Random lantai 1-3
                 'created_at'  => now(),
                 'updated_at'  => now(),

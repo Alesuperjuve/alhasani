@@ -51,5 +51,8 @@ return [
     'picture-048.jpg',
     'picture-049.jpg',
     'picture-050.jpg',
+    'picture-051.jpg',
+    'picture-052.jpg',
+    'picture-053.jpg',
 ];
 

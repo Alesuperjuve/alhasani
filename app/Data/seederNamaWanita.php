@@ -7,7 +7,6 @@ return [
     'Greysia Polii',
     'Nitya Krishinda Maheswari',
     'Liliyana Natsir',
-    'Rexy Mainaky',
     'Mia Audina',
     'Yulfira Barkah',
     'Nathalia Polii',
