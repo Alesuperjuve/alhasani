@@ -14,7 +14,7 @@
   
   <body class="with-welcome-text">
     <div class="container-scroller">
-      <x-selamatdatang />
+      <x-selamat-datang />
       <div class="container-fluid page-body-wrapper">
         <x-sidebar-menu level="1" />
           <div class="main-panel">

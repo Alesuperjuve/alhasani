@@ -27,7 +27,7 @@
                 <a href="#" class="btn btn-otline-dark align-items-center" data-bs-toggle="modal" data-bs-target="#modal-tambah-kamar">
                     <i class="mdi mdi-apple-keyboard-control"></i> Tambah Kamar
                 </a>
-                <a href="#" class="btn btn-otline-dark align-items-center" data-bs-toggle="modal" data-bs-target="#modal-cache">
+                <a href="#" class="btn btn-otline-dark align-items-center" data-bs-toggle="modal" data-bs-target="#">
                     <i class="icon-printer"></i> Cetak
                 </a>
                 <a href="#" class="btn btn-primary text-white me-0">

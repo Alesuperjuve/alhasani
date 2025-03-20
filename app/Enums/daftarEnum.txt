@@ -32,3 +32,21 @@ DAFTAR ENUM
 	5	= Nenek
 	6	= Sepupu
 	7	= Lainnya
+
+7. Pos (Tabel Users)
+	0	= Ketua
+	1	= Wakil Ketua
+	2	= Sekretaris
+	3	= Wakil Sekretaris
+	4	= Bendahara 1
+	5	= Bendahara 2
+	6	= TU
+	7	= Anak Buah
+	99  = Non Job
+	
+8. Level (Tabel Users)
+	0	= Superadmin
+	1	= Admin
+	2	= Vice Admin
+	3	= Biasa
+	4	= Read Only

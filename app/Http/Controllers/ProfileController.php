@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\User;
 
 use App\Http\Requests\ProfileUpdateRequest;
 use App\Helpers\FruitHelper;
@@ -9,16 +10,34 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
+use App\Enums\enumPosisi;
 
 class ProfileController extends Controller
 {
-    public function indeks(Request $request): View
+    public function index(Request $request): View
     {
-        return view('components.santri');
+        
     }
     /**
      * Display the user's profile form.
      */
+    public function show()
+    {
+        // Ambil data pengguna dari database
+        $users = User::orderBy('pos', 'asc')->get();
+
+        // Tambahkan nomor urut dan enum posisi
+        $users = $users->map(function ($user, $index) {
+            $user->no_urut = $index + 1; // Menambahkan nomor urut mulai dari 1
+            $user->posisi = enumPosisi::posisiTampil($user->pos); 
+            
+            return $user;
+        });
+
+        // Kirim data ke view
+        return view('profile.show', compact('users'));
+    }
+
     public function edit(Request $request): View
     {
         return view('profile.edit', [

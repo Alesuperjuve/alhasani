@@ -26,6 +26,7 @@ class DatabaseSeeder extends Seeder
             KamarSeeder::class,
             SantriSeeder::class,
             PesantrenSeeder::class,
+            UserSeeder::class,
         ]);
     }
 }

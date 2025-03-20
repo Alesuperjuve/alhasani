@@ -6,9 +6,10 @@ use App\Http\Controllers\KamarController;
 use App\Http\Controllers\PesantrenController;
 use App\Http\Controllers\AsramaController;
 use App\Http\Controllers\cetakPDFController;
-use App\Http\Controllers\laporanController;
+use App\Http\Controllers\LaporanController;
 use App\Http\Controllers\KartuController;
-
+use App\Http\Controllers\ReportController;
+use App\Http\Controllers\PDFController;
 
 
 use Illuminate\Support\Facades\Route;
@@ -22,7 +23,8 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::get('/profile', [ProfileController::class, 'show'])->name('profile.show');
+    Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
@@ -34,6 +36,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/santri/{id}', [SantriController::class, 'show'])->name('santri.show');
     Route::post('/upload', [SantriController::class, 'updateFoto'])->name('santri.update');
 
+    //UPLOAD PDF
+    Route::get('/uploadpdf', [PDFController::class, 'uploadForm'])->name('upload.form');
+    Route::post('/uploadpdf', [PDFController::class, 'uploadFile'])->name('upload.file');
 
 
     
@@ -59,6 +64,7 @@ Route::middleware('auth')->group(function () {
     
     Route::view('/madrasah', 'madrasah')->name('madrasah');
     Route::view('/keuangan', 'keuangan')->name('keuangan');
+    Route::view('/report', 'report')->name('report');
     
     //laporan
     Route::get('/laporan', [LaporanController::class, 'index'])->name('laporan');

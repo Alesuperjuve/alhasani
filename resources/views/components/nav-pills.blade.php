@@ -94,12 +94,13 @@
             <div class="row">
                 <div class="col-8"></div>
                 <div class="col-4 p-2">
+                    <!-- BAGIAN TAMBAH ASRAMA DINONAKTIFKAN DULU, NANTI DIBIKIN DINAMIS AJA
                     <button 
                         class="btn btn-primary btn-sm text-white pull-right me-2" 
                         data-bs-toggle="modal" 
                         data-bs-target="#tambahAsramaModal">
                         <i class="mdi mdi-apple-keyboard-shift"></i> Tambah Asrama
-                    </button>
+                    </button> -->
                 </div>
             </div>
             <x-tabel-asrama :asramas="$asramas" />

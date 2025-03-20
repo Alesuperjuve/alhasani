@@ -18,6 +18,6 @@ class SkripBawah extends Component
 
     public function render()
     {
-        return view('components.skrip-bawah');
+        return view('components.skripbawah');
     }
 }

@@ -2,7 +2,7 @@
 
 namespace App\Data;
 
-class SkripAtas
+class skripAtas
 {
     public static function getScripts()
     {
@@ -15,3 +15,5 @@ class SkripAtas
         ];
     }
 }
+
+

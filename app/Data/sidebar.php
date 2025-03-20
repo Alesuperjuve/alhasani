@@ -29,6 +29,12 @@ class sidebar
                         'link'  => 'pesantren',
                         'level'  => '1'
                     ],
+                    [
+                        'nama'  => 'Pengurus',
+                        'icon'  => 'mdi mdi-table menu-icon',
+                        'link'  => 'profile.show',
+                        'level'  => '1'
+                    ],
                 ],
             ],
             [
@@ -41,6 +47,7 @@ class sidebar
                         'link'  => 'santri.index',
                         'level'  => '1'
                     ],
+                    
                     [
                         'nama'  => 'Kamar',
                         'icon'  => 'mdi mdi-table menu-icon',
@@ -57,7 +64,7 @@ class sidebar
                         'nama'  => 'Skincare',
                         'icon'  => 'mdi mdi-layers-outline menu-icon',
                         'link'  => 'madrasah',
-                        'level'  => '1'
+                        'level'  => '2'
                     ],
                 ],
             ],
@@ -75,13 +82,13 @@ class sidebar
                         'nama'  => 'Laporan',
                         'icon'  => 'mdi mdi-account-box-outline menu-icon',
                         'link'  => 'laporan',
-                        'level'  => '2'
+                        'level'  => '1'
                     ],
                     [
                         'nama'  => 'Report',
                         'icon'  => 'mdi mdi-account-box-outline menu-icon',
-                        'link'  => 'dashboard',
-                        'level'  => '2'
+                        'link'  => 'report',
+                        'level'  => '1'
                     ],
                     [
                         'nama'  => 'Cetak PDF',

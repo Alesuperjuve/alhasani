@@ -13,7 +13,7 @@ class SidebarMenu extends Component
     public function __construct($level = 'all')
     {
         $this->level = $level;
-        $this->menu = $this->filterMenu(sidebar::getAll(), $level);
+        $this->menu  = $this->filterMenu(sidebar::getAll(), $level);
     }
 
     private function filterMenu($menus, $level)
